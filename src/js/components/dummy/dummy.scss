@@ -1,0 +1,22 @@
+.test {
+  color: red;
+  display: flex;
+  height: 64px;
+  line-height: 64px;
+  &One {
+    padding-left: 64px + 8px;
+    background: url(./logo_g_square_round_640.png); // file size: 23kB 
+    background-size: 64px 64px;
+    background-repeat: no-repeat;
+    background-position: left center;
+  }
+  &Two {
+    width: 64px;
+    margin-left: 8px;
+    background: url(./logo_g_128.png); // file size: 2kB, will convert to data-uri
+    background-size: 64px 64px;
+    background-repeat: no-repeat;
+    background-position: left center;
+    border: none;
+  }
+}

@@ -1,0 +1,65 @@
+@charset "utf-8";
+@import "./mixins";
+
+@charset "utf-8";
+
+$themeColor: #00307C;
+$bgColor: #F0F0F0;
+$mainBtnColor: $themeColor;
+$mainBtnFontColor: white;
+
+$headerHeight: 88px;
+$headerInnerHeight: 88px;
+
+$fontSizeNormal: 20px;
+
+
+html, body {
+  margin: 0;
+  padding: 0;
+  font-size: $fontSizeNormal;
+  background-color: $bgColor;
+  user-select: none;
+}
+
+div, p {
+  margin: 0;
+  padding: 0;
+  font-family: 'SourceHanSansJP-Regular';
+}
+
+@font-face {
+  font-family: 'SourceHanSansJP-Bold';
+  src: url('./SourceHanSansJP/SourceHanSansJP-Bold.otf');
+}
+
+@font-face {
+  font-family: 'SourceHanSansJP-ExtraLight';
+  src: url('./SourceHanSansJP/SourceHanSansJP-ExtraLight.otf');
+}
+
+@font-face {
+  font-family: 'SourceHanSansJP-Heavy';
+  src: url('./SourceHanSansJP/SourceHanSansJP-Heavy.otf');
+}
+
+@font-face {
+  font-family: 'SourceHanSansJP-Light';
+  src: url('./SourceHanSansJP/SourceHanSansJP-Light.otf');
+}
+
+@font-face {
+  font-family: 'SourceHanSansJP-Medium';
+  src: url('./SourceHanSansJP/SourceHanSansJP-Medium.otf');
+}
+
+@font-face {
+  font-family: 'SourceHanSansJP-Normal';
+  src: url('./SourceHanSansJP/SourceHanSansJP-Normal.otf');
+}
+
+@font-face {
+  font-family: 'SourceHanSansJP-Regular';
+  src: url('./SourceHanSansJP/SourceHanSansJP-Regular.otf');
+}
+
