@@ -26,6 +26,7 @@ jobs:
           name: merge
           command: |
             git checkout -b gh-pages
+            git reset --hard HEAD
             git pull "git@github.com:${CIRCLE_PROJECT_USERNAME}/${CIRCLE_PROJECT_REPONAME}.git" gh-pages
             git merge --no-ff ${CIRCLE_BRANCH}
       - run:
