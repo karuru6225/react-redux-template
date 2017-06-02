@@ -14,7 +14,7 @@ export default class extends React.Component {
       <div
         className={style.test}
       >
-        <div className={style.testOne}>Hello, World</div>
+        <div className={style.testOne}>Hello, World!!</div>
         <button
           className={style.testTwo}
           onClick={() => {

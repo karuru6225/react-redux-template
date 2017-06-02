@@ -23,10 +23,21 @@ jobs:
             git config --global user.email 'e2hjhi@gmail.com'
             git config --global user.name 'karuru6225'
       - run:
-          name: merge
+          name: git status
+          command: |
+            git branch -a
+            git --no-pager log --graph --all --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
+      - run:
+          name: pull
           command: |
             git checkout -b gh-pages
-            git merge --no-ff ${CIRCLE_BRANCH}
+            git reset --hard origin/gh-pages
+            git --no-pager log --graph --all --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
+            git pull "git@github.com:${CIRCLE_PROJECT_USERNAME}/${CIRCLE_PROJECT_REPONAME}.git" gh-pages
+      - run:
+          name: merge
+          command: |
+            git merge --no-commit --no-ff ${CIRCLE_BRANCH}
       - run:
           name: Install dependencies
           command: npm install
