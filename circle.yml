@@ -42,6 +42,9 @@ jobs:
           command: |
             git add -A
             git commit -m "[auto] circleci"
+      - add_ssh_keys:
+          fingerprints:
+            - "aa:05:a5:47:6e:95:92:96:b6:ce:24:3e:a0:57:9d:1e"
       - run:
           name: push
           command: |
