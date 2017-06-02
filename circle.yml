@@ -25,7 +25,7 @@ jobs:
       - run:
           name: merge
           command: |
-            git checkout gh-pages
+            git checkout -b gh-pages
             git merge --no-ff ${CIRCLE_BRANCH}
       - run:
           name: Install dependencies
