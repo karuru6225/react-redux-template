@@ -43,7 +43,7 @@ jobs:
           command: npm install
       - run:
           name: Build
-          command: npm run build
+          command: NODE_ENV=production npm run build
       - run:
           name: reWrite ignores
           command: |
