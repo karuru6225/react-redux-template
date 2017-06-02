@@ -44,9 +44,7 @@ jobs:
             git commit -m "[auto] circleci"
       - run:
           name: push
-          command: |
-            echo git push "git@github.com:${CIRCLE_PROJECT_USERNAME}/${CIRCLE_PROJECT_REPONAME}.git" gh-pages
-            git push "git@github.com:${CIRCLE_PROJECT_USERNAME}/${CIRCLE_PROJECT_REPONAME}.git" gh-pages
+          command: git push
       - save_cache:
           key: projectname-{{ .Branch }}-{{ checksum "package.json" }}
           paths:
