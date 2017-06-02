@@ -37,7 +37,7 @@ jobs:
       - run:
           name: merge
           command: |
-            git merge --no-ff ${CIRCLE_BRANCH}
+            git --no-commit merge --no-ff ${CIRCLE_BRANCH}
       - run:
           name: Install dependencies
           command: npm install
