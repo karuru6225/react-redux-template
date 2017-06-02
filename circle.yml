@@ -36,8 +36,7 @@ jobs:
       - run:
           name: reWrite ignores
           command: |
-             sed -i '.bak' -e '/^dst$/d' .gitignore
-             rm -f .gitignore.bak
+            sed --in-place=.bak -e '/^dst$/d' .gitignore
       - run:
           name: commit
           command: |
