@@ -16,7 +16,7 @@ export default (() => {
     compose(
       applyMiddleware(
         sagaMiddleare,
-        /*routerMiddleware(hashHistory)*/
+        /* routerMiddleware(hashHistory) */
       )
     )
   );
