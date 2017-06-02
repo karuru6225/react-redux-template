@@ -31,7 +31,7 @@ jobs:
           name: pull
           command: |
             git checkout -b gh-pages
-            git reset --hard gh-pages
+            git reset --hard origin/gh-pages
             git --no-pager log --graph --all --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
             git pull "git@github.com:${CIRCLE_PROJECT_USERNAME}/${CIRCLE_PROJECT_REPONAME}.git" gh-pages
       - run:
