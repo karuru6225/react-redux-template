@@ -19,6 +19,7 @@ jobs:
             echo "npm $(npm -v)"
       - run:
           name: git config
+          command: |
             git config --global user.email 'e2hjhi@gmail.com'
             git config --global user.name 'karuru6225'
       - run:
