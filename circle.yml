@@ -23,6 +23,11 @@ jobs:
             git config --global user.email 'e2hjhi@gmail.com'
             git config --global user.name 'karuru6225'
       - run:
+          name: git status
+          command: |
+            git branch -a
+            git log
+      - run:
           name: pull
           command: |
             git checkout -b gh-pages
