@@ -1,10 +1,4 @@
 export default {
-  fr: {
-    'dummy1.helloworld': 'Hello, World',
-    'dummy1.link': 'To Dummy Page',
-    'dummy2.dummybutton1': 'Switch Language',
-    'dummy2.dummybutton2': 'フランス語'
-  },
   en: {
     'dummy1.helloworld': 'Hello, World',
     'dummy1.link': 'To Dummy Page',
@@ -22,5 +16,11 @@ export default {
     'dummy1.link': '到虚拟页面',
     'dummy2.dummybutton1': '语言切换',
     'dummy2.dummybutton2': '中国語'
+  },
+  fr: {
+    'dummy1.helloworld': 'Hello, World',
+    'dummy1.link': 'To Dummy Page',
+    'dummy2.dummybutton1': 'Switch Language',
+    'dummy2.dummybutton2': 'フランス語'
   }
 };
