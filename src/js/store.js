@@ -1,22 +1,28 @@
 import { compose, createStore, applyMiddleware } from 'redux';
 import createSagaMiddleware from 'redux-saga';
-// import { routerMiddleware } from 'react-router-redux';
-// import { hashHistory } from 'react-router';
-import rootSaga from './sagas/index';
-import reducers from './reducers/index';
+import messages from 'locales/messages';
+import rootSaga from 'sagas/index';
+import reducers from 'reducers/index';
 
 const sagaMiddleare = createSagaMiddleware();
+
+/* eslint-disable no-underscore-dangle */
+/* eslint-disable max-len */
+const composer = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
+/* eslint-enable */
 
 export default (() => {
   const store = createStore(
     reducers,
-    /* eslint-disable no-underscore-dangle */
-    window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__(),
-    /* eslint-enable */
-    compose(
+    {
+      intl: {
+        locale: 'en',
+        messages: messages.en
+      }
+    },
+    composer(
       applyMiddleware(
         sagaMiddleare,
-        /* routerMiddleware(hashHistory) */
       )
     )
   );

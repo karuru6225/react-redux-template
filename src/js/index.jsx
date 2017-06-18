@@ -2,21 +2,30 @@ import 'babel-polyfill';
 
 import React from 'react';
 import { render } from 'react-dom';
-// import { Router, Route, hashHistory as appHistory} from 'react-router';
-// import { syncHistoryWithStore } from 'react-router-redux';
-import { Provider } from 'react-redux';
+import { HashRouter, Route } from 'react-router-dom';
+import { addLocaleData } from 'react-intl';
+import ja from 'react-intl/locale-data/ja';
+import en from 'react-intl/locale-data/en';
+import zh from 'react-intl/locale-data/zh';
+import fr from 'react-intl/locale-data/fr';
+import { Provider } from 'react-intl-redux';
 
 import store from './store';
 
-import Dummy from './containers/dummy';
+import Dummy1 from './containers/dummy1';
+import Dummy2 from './containers/dummy2';
 
-// const history = syncHistoryWithStore(appHistory, store);
+addLocaleData([...ja, ...en, ...zh, ...fr]);
 
 window.addEventListener('DOMContentLoaded', () => {
-  console.log('ReactDOM.render');
   render(
     <Provider store={store}>
-      <Dummy />
+      <HashRouter>
+        <div>
+          <Route path="/" component={Dummy1} exact />
+          <Route path="/dummy" component={Dummy2} exact />
+        </div>
+      </HashRouter>
     </Provider>,
     window.document.getElementById('root')
   );
