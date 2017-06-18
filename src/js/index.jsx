@@ -7,6 +7,7 @@ import { addLocaleData } from 'react-intl';
 import ja from 'react-intl/locale-data/ja';
 import en from 'react-intl/locale-data/en';
 import zh from 'react-intl/locale-data/zh';
+import fr from 'react-intl/locale-data/fr';
 import { Provider } from 'react-intl-redux';
 
 import store from './store';
@@ -14,7 +15,7 @@ import store from './store';
 import Dummy1 from './containers/dummy1';
 import Dummy2 from './containers/dummy2';
 
-addLocaleData([...ja, ...en, ...zh]);
+addLocaleData([...ja, ...en, ...zh, ...fr]);
 
 window.addEventListener('DOMContentLoaded', () => {
   render(

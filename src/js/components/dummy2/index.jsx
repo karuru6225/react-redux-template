@@ -27,6 +27,9 @@ export default function Dummy2({ switchLanguage, changePage }) {
       <div>
         <FormattedNumber value={1000} style="currency" currency="JPY" />
       </div>
+      <div>
+        <FormattedNumber value={1000} />
+      </div>
     </div>
   );
 }
